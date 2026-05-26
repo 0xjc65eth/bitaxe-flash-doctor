@@ -1,0 +1,29 @@
+name: Bug report
+description: Report a parsing or verification problem.
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe the command, output, and expected behavior.
+    validations:
+      required: true
+  - type: textarea
+    id: files
+    attributes:
+      label: Firmware context
+      description: Include filenames, hashes, board/ASIC, and release source. Do not upload private credentials or wallet config.
+      placeholder: |
+        board: Gamma
+        asic: BM1370
+        esp-miner sha256:
+        www sha256:
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Command output
+      render: text

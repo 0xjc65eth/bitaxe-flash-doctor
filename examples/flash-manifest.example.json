@@ -1,0 +1,22 @@
+{
+  "status": "OK",
+  "message": "firmware and AxeOS assets are both present",
+  "files": [
+    {
+      "path": "esp-miner.bin",
+      "name": "esp-miner.bin",
+      "role": "esp-miner",
+      "size": 41,
+      "sha256": "41806b5b0c00b793acc9416157e6b561b7da9839ea685eac4517621280375807",
+      "versions": ["v2.13.1", "cypher-gamma-max-v0.6.2"]
+    },
+    {
+      "path": "www.bin",
+      "name": "www.bin",
+      "role": "axeos-www",
+      "size": 34,
+      "sha256": "0b02eab31834a11498181e67007f8331f791961fed16b025b0e3a38b48f09ed2",
+      "versions": ["7afa9af", "v2.13.1"]
+    }
+  ]
+}

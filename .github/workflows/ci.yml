@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.11", "3.12", "3.13"]
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install
+        run: python -m pip install -e .
+      - name: Test
+        run: python -m pytest -q
+      - name: Smoke test CLI
+        run: |
+          printf 'esp-miner\0v2.13.1\0cypher-gamma-max-v0.6.2' > /tmp/esp-miner.bin
+          printf '<html>AxeOS 7afa9af v2.13.1</html>' > /tmp/www.bin
+          bitaxe-flash-doctor inspect /tmp/esp-miner.bin /tmp/www.bin
+          bitaxe-flash-doctor manifest /tmp/esp-miner.bin /tmp/www.bin > /tmp/flash-manifest.json
+          python -m json.tool /tmp/flash-manifest.json >/dev/null

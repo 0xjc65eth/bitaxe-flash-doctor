@@ -1,5 +1,8 @@
 # Bitaxe Flash Doctor
 
+[![CI](https://github.com/0xjc65eth/bitaxe-flash-doctor/actions/workflows/ci.yml/badge.svg)](https://github.com/0xjc65eth/bitaxe-flash-doctor/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 Small offline checks for Bitaxe / AxeOS firmware bundles.
 
 This is not another firmware fork. It is a verification tool for people who flash Bitaxe miners and want to avoid the common mistakes: mixed `www.bin` / `esp-miner.bin` versions, unknown binaries, missing hashes, and unclear flash notes.
@@ -41,10 +44,32 @@ Create a manifest:
 bitaxe-flash-doctor manifest ./dist/*.bin > flash-manifest.json
 ```
 
+Create `SHA256SUMS`:
+
+```bash
+bitaxe-flash-doctor sums ./dist/*.bin > SHA256SUMS
+```
+
 Print a flash checklist:
 
 ```bash
 bitaxe-flash-doctor checklist --board gamma --asic bm1370
+```
+
+## Share A Bundle Safely
+
+When sharing firmware with friends, include the manifest next to the binaries:
+
+```bash
+bitaxe-flash-doctor manifest esp-miner.bin www.bin > flash-manifest.json
+bitaxe-flash-doctor sums esp-miner.bin www.bin flash-manifest.json > SHA256SUMS
+```
+
+Ask receivers to run:
+
+```bash
+bitaxe-flash-doctor inspect esp-miner.bin www.bin
+shasum -a 256 -c SHA256SUMS
 ```
 
 ## What It Checks
@@ -90,6 +115,8 @@ bundle: OK - firmware and AxeOS assets are both present
 - known-bad firmware notes
 - reproducible build metadata
 - optional Bitaxe API health snapshot before and after flashing
+
+See [docs/ROADMAP.md](docs/ROADMAP.md) for the release plan.
 
 ## Support
 

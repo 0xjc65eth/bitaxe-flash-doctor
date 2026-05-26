@@ -22,9 +22,16 @@ def cmd_inspect(args: argparse.Namespace) -> int:
 
 
 def cmd_manifest(args: argparse.Namespace) -> int:
-    reports = [inspect_binary(Path(path)).to_dict() for path in args.files]
-    status, message = bundle_status([inspect_binary(Path(path)) for path in args.files])
-    print(json.dumps({"status": status, "message": message, "files": reports}, indent=2))
+    reports = [inspect_binary(Path(path)) for path in args.files]
+    status, message = bundle_status(reports)
+    print(json.dumps({"status": status, "message": message, "files": [report.to_dict() for report in reports]}, indent=2))
+    return 0
+
+
+def cmd_sums(args: argparse.Namespace) -> int:
+    for path in args.files:
+        report = inspect_binary(Path(path))
+        print(f"{report.sha256}  {report.name}")
     return 0
 
 
@@ -57,6 +64,10 @@ def build_parser() -> argparse.ArgumentParser:
     manifest = subparsers.add_parser("manifest", help="write a JSON manifest")
     manifest.add_argument("files", nargs="+", help="binary files to include")
     manifest.set_defaults(func=cmd_manifest)
+
+    sums = subparsers.add_parser("sums", help="write SHA256SUMS-style output")
+    sums.add_argument("files", nargs="+", help="binary files to hash")
+    sums.set_defaults(func=cmd_sums)
 
     checklist = subparsers.add_parser("checklist", help="print a safe flash checklist")
     checklist.add_argument("--board", help="board name, for example gamma")
