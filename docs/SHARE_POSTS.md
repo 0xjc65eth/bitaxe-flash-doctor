@@ -163,6 +163,9 @@ BTC:
 
 Repo:
 https://github.com/0xjc65eth/bitaxe-flash-doctor
+
+Support request:
+https://github.com/0xjc65eth/bitaxe-flash-doctor/issues/new?template=bitaxe-support.yml
 ```
 
 ## Short X Post
@@ -176,6 +179,9 @@ firmware/AxeOS mismatch, pool fallback, high ping, stale shares, error rate, BM1
 No keys. No custody. Just diagnostics.
 
 https://github.com/0xjc65eth/bitaxe-flash-doctor
+
+Open a support request:
+https://github.com/0xjc65eth/bitaxe-flash-doctor/issues/new?template=bitaxe-support.yml
 ```
 
 ## Forum / Discord Post

@@ -20,6 +20,14 @@ I offer remote Bitaxe support for:
 - preparing a clean flash checklist before you send firmware to friends
 - recovery guidance when the miner boots but the dashboard looks wrong
 
+Start a support request:
+
+https://github.com/0xjc65eth/bitaxe-flash-doctor/issues/new?template=bitaxe-support.yml
+
+Services:
+
+[docs/SERVICES.md](docs/SERVICES.md)
+
 Send:
 
 - Bitaxe model / ASIC chip
