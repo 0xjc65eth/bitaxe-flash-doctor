@@ -142,3 +142,61 @@ The use case is sharing firmware with friends or checking a folder before flashi
 
 Feedback welcome. I want it to stay boring, transparent, and useful.
 ```
+## Bitaxe Support Offer
+
+```text
+Bitaxe / AxeOS help available.
+
+I can help with:
+- firmware + AxeOS mismatch warnings
+- correct esp-miner.bin + www.bin flashing
+- pool fallback / ping / stale shares / error rate
+- BM1366, BM1368, BM1370 configuration review
+- safer flash checklist before sharing firmware with friends
+
+No seed phrases. No private keys. No custody.
+
+Send your Bitaxe model + AxeOS screenshot.
+
+BTC:
+35gjAoadgQxrNc1Kx6QiSLx7wCCXRnRFkM
+
+Repo:
+https://github.com/0xjc65eth/bitaxe-flash-doctor
+```
+
+## Short X Post
+
+```text
+Running a Bitaxe and stuck after flashing?
+
+I am helping miners fix:
+firmware/AxeOS mismatch, pool fallback, high ping, stale shares, error rate, BM1366/BM1368/BM1370 setup.
+
+No keys. No custody. Just diagnostics.
+
+https://github.com/0xjc65eth/bitaxe-flash-doctor
+```
+
+## Forum / Discord Post
+
+```text
+If anyone is having Bitaxe / AxeOS problems after flashing, I can help review the setup.
+
+Useful info to send:
+- Bitaxe model and ASIC chip
+- AxeOS dashboard screenshot
+- firmware + AxeOS versions
+- pool URL and worker format
+- ping, stale shares, error rate, temp, hashrate
+
+I mainly help with mismatched esp-miner.bin/www.bin, pool fallback warnings, unstable hashrate, and safer flash checklists.
+
+No seed phrases, no private keys, no exchange logins.
+
+Repo:
+https://github.com/0xjc65eth/bitaxe-flash-doctor
+
+BTC tips/payment:
+35gjAoadgQxrNc1Kx6QiSLx7wCCXRnRFkM
+```

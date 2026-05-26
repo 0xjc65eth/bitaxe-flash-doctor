@@ -7,6 +7,34 @@ Small offline checks for Bitaxe / AxeOS firmware bundles.
 
 This is not another firmware fork. It is a verification tool for people who flash Bitaxe miners and want to avoid the common mistakes: mixed `www.bin` / `esp-miner.bin` versions, unknown binaries, missing hashes, and unclear flash notes.
 
+## Remote Bitaxe / AxeOS Support
+
+Need help after a flash, mismatch warning, high ping, stale shares, or unstable hashrate?
+
+I offer remote Bitaxe support for:
+
+- matching `esp-miner.bin` and `www.bin` before flashing
+- fixing firmware / AxeOS version mismatch warnings
+- reviewing pool settings, ping, stale shares, and error rate
+- checking BM1366, BM1368, and BM1370 configuration
+- preparing a clean flash checklist before you send firmware to friends
+- recovery guidance when the miner boots but the dashboard looks wrong
+
+Send:
+
+- Bitaxe model / ASIC chip
+- screenshot of the AxeOS dashboard
+- firmware and AxeOS versions shown in the warning
+- pool URL, worker format, ping, stale share percentage, and error rate
+
+BTC payment / tips:
+
+```text
+35gjAoadgQxrNc1Kx6QiSLx7wCCXRnRFkM
+```
+
+No custody. No wallet seed requests. No private keys. No hidden remote access.
+
 ## Why This Exists
 
 Bitaxe firmware is real hardware software. Bad instructions can cost people uptime, heat margin, and trust.
