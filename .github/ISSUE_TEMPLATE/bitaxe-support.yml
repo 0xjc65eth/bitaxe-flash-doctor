@@ -1,0 +1,92 @@
+name: Bitaxe / AxeOS support request
+description: Ask for help with flashing, mismatch warnings, pool setup, ping, stale shares, or error rate.
+title: "Bitaxe support: "
+labels: ["support"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form if you need help with a Bitaxe / AxeOS flash or stability problem.
+
+        Do not share seed phrases, private keys, exchange logins, or personal secrets.
+
+  - type: input
+    id: bitaxe-model
+    attributes:
+      label: Bitaxe model
+      description: Example: Gamma, Supra, Ultra, Hex, custom build.
+      placeholder: "Gamma"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: asic-chip
+    attributes:
+      label: ASIC chip
+      options:
+        - BM1366
+        - BM1368
+        - BM1370
+        - Other / not sure
+    validations:
+      required: true
+
+  - type: input
+    id: firmware-version
+    attributes:
+      label: Firmware version
+      placeholder: "v2.13.1 / cypher-gamma-max-v0.6.2 / not sure"
+    validations:
+      required: true
+
+  - type: input
+    id: axeos-version
+    attributes:
+      label: AxeOS version
+      placeholder: "7afa9af / not sure"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is happening?
+      description: Include mismatch warnings, fallback pool warnings, unstable hashrate, reboot loops, high ping, stale shares, or error rate.
+      placeholder: "After flashing I see..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: dashboard
+    attributes:
+      label: Dashboard numbers
+      description: Paste the values you can see in AxeOS.
+      value: |
+        Hashrate:
+        ASIC temp:
+        Voltage:
+        Frequency:
+        Ping:
+        Stale shares:
+        Error rate:
+        Pool:
+        Worker format:
+    validations:
+      required: true
+
+  - type: textarea
+    id: files-used
+    attributes:
+      label: Files flashed
+      description: List the exact files or release links used.
+      placeholder: |
+        esp-miner.bin:
+        www.bin:
+        merged.bin, if used:
+
+  - type: markdown
+    attributes:
+      value: |
+        BTC tips / paid support:
+
+        `35gjAoadgQxrNc1Kx6QiSLx7wCCXRnRFkM`
